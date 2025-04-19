@@ -15,16 +15,16 @@ export function Signup(){
                         <span className="text-gray-400 pt-2 pl-12">
                             Join thousands of users managing their finance
                         </span>  
-                        <div className="pl-3 pt-3 ">
+                        <div className="pl-3 pt-3 pr-3">
                             <InputC type="text" label="Username" startIcon={<UserIcon size="md"/>}/>
                         </div>
-                        <div className="pl-3">
+                        <div className="pl-3 pr-3">
                             <PasswordC/>    
                         </div>   
-                        <div className="pl-3 ">
+                        <div className="pl-3 pr-3">
                             <InputC type="text" label="Firstname" startIcon={<NameIcon/>}/>
                         </div>    
-                        <div className="pl-3 ">
+                        <div className="pl-3 pr-3">
                             <InputC type="text" label="Lastname" startIcon={<NameIcon/>}/>
                         </div>                
                 </div>

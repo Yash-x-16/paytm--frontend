@@ -25,7 +25,7 @@ export function PasswordC(prop:input){
 
 
     return (
-  <div className="flex justify-start bg-slate-500 rounded-md m-2 h-12 w-auto ">
+  <div className="flex justify-start bg-slate-500 rounded-md m-2 h-12 w-auto border-gray-400  hover:border-blue-700 border-2" >
     {/* Lock Icon */}
     <div className="text-white pt-3  pl-2">
       <LockIcon />
@@ -40,10 +40,10 @@ export function PasswordC(prop:input){
       className="bg-inherit  focus:outline-none w-40 inline-block pl-2 text-white"
     />
 
-    {/* Eye Icon */}
+
     <button type="button"
        onClick={toggleVisibility} 
-       className="  bg-inherit pt-3 pl-44 text-gray-400 inline-flex rounded-r-md">
+       className="  bg-inherit pt-4 ml-40 text-gray-400 inline-flex rounded-r-md">
         {visible ? <ClosedEye /> : <EyeIcon />}
     </button>  
   </div>
