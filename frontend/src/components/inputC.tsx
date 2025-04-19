@@ -11,7 +11,7 @@ endIcon? :ReactElement
 
 
 export function InputC(prop:input){
-    return <div className="h-12 w-10 bg-slate-500 flex rounded-md m-7 justify-start" > 
+    return <div className="h-12 w-auto  bg-slate-500 flex rounded-md m-2 justify-start" > 
         <div className="pt-3 pl-2 rounded-md  ">
             {prop.startIcon}
             </div> 

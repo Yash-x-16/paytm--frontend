@@ -1,6 +1,6 @@
-import { ReactElement, Ref } from "react";
+import { ReactElement, Ref, useState } from "react";
 import { LockIcon } from "../icons/lockIcons"; 
-import { EyeIcon } from "../icons/eyeIcon";
+import { EyeIcon,ClosedEye } from "../icons/eyeIcon";
 
 
 interface input{
@@ -8,11 +8,24 @@ interface input{
 refrence? : Ref<HTMLInputElement> , 
 endIcon? :ReactElement 
 }
+ 
+
+export function PasswordC(prop:input){ 
+  const [visible, setVisible] = useState(false);
+  const [password, setPassword] = useState("");
+
+    const toggleVisibility = () => {
+    setVisible((prev) => !prev);
+  };
+
+   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
 
 
-export function PasswordC(prop:input){
+
     return (
-  <div className="flex justify-start bg-slate-500 rounded-md m-7 h-12 w-10">
+  <div className="flex justify-start bg-slate-500 rounded-md m-2 h-12 w-auto ">
     {/* Lock Icon */}
     <div className="text-white pt-3  pl-2">
       <LockIcon />
@@ -20,16 +33,19 @@ export function PasswordC(prop:input){
 
     {/* Input Field */}
     <input
-      type={prop.type}
+     type={visible ? "text" : "password"}
       placeholder="PASSWORD"
+      onChange={handleChange}
       ref={prop.refrence}
-      className="bg-inherit  focus:outline-none w-40 inline-block pl-2"
+      className="bg-inherit  focus:outline-none w-40 inline-block pl-2 text-white"
     />
 
     {/* Eye Icon */}
-    <button type="button" className=" pr-2 bg-inherit pt-3 mr-3 inline-flex ">
-      <EyeIcon />
-    </button>
+    <button type="button"
+       onClick={toggleVisibility} 
+       className="  bg-inherit pt-3 pl-44 text-gray-400 inline-flex rounded-r-md">
+        {visible ? <ClosedEye /> : <EyeIcon />}
+    </button>  
   </div>
 );
 
