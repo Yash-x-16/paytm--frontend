@@ -18,7 +18,7 @@ export function Signin(){
                         <span className="text-gray-400 pt-2 text-center">
                             Sign in to access you account
                         </span>  
-                        <div className="pl-3 pt-3 pr-3">
+                        <div className="pl-3 pt-3 pr-3 text-gray-400">
                             <InputC type="text" label="Username" startIcon={<UserIcon />}/>
                         </div>
                         <div className="pl-3 pr-3">

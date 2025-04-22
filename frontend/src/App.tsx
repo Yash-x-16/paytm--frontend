@@ -1,10 +1,8 @@
 import './App.css' 
-import { Signup } from './pages/signup' 
-import { Signin } from './pages/signin'
-
+import { Dashboard } from './pages/dashboard'
 function App() { 
   return ( 
-    <Signin/>
+    <Dashboard/>
   )
 }
 
