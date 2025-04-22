@@ -1,4 +1,4 @@
-type variants = "primary" | "secondary"
+type variants = "primary" | "secondary" |"tertiary"
 interface ButtonProp{
     variant : variants , 
     size : "lg" |"xl"|"2xl", 
@@ -12,19 +12,20 @@ interface ButtonProp{
  
 const variantStyle = {
       "primary": "bg-blue-600 text-white font-normal ", 
-    "secondary": "bg-slate-800 text-white"
+    "secondary": "bg-slate-800 text-white",
+    "tertiary" : "bg-green-500 text-white font-normal"
 } 
 const sizeStyle = {
     "lg" : "py-2 px-4 w-auto text-lg  rounded-md flex  text-center",  
-    "xl" :"py-2 px-4 max-w-sm text-lg m-5 rounded-md flex  text-center",
+    "xl" :"py-3 px-4 w-full max-w-full text-lg  rounded-md flex text-center  m-2",
     "2xl" :""
 } 
 
-const DefaulStyles = "rounded-md flex font-light "
+const DefaulStyles = "rounded-md flex font-light  "
 
 
 
 export const BGbutton =(props:ButtonProp)=>{
     return <button onClick={props.onclick} className={`${variantStyle[props.variant]} ${DefaulStyles} ${props.fullwidth?" w-full flex justify-center items-center text-center":""}${sizeStyle[props.size]} ${props.loading?"opacity-45 ":""}` }>
- {props.onStart?<div className="pr-2 pl-10 py-1 inline-block text-white">{props.onStart}</div>:null} <span className="m-auto">{props.text}</span>{props.onEnd?<div className="pl-2 py-1">{props.onEnd}</div>:null}</button>
+ {props.onStart?<div className="  py-1  text-white">{props.onStart}</div>:null} <span className="">{props.text}</span>{props.onEnd?<div className="pl-2 py-1">{props.onEnd}</div>:null}</button>
 }
