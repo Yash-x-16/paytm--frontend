@@ -34,7 +34,7 @@ export function PasswordC(prop:input){
     {/* Input Field */}
     <input
      type={visible ? "text" : "password"}
-      placeholder="PASSWORD"
+      placeholder="Password"
       onChange={handleChange}
       ref={prop.refrence}
       className="bg-inherit  focus:outline-none w-40 inline-block pl-2 text-white"

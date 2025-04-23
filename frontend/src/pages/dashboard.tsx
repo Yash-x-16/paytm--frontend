@@ -1,7 +1,6 @@
 import { Navbar } from "../components/navbar" 
 import SearchInput from "../components/newinput" 
-import { BGbutton } from "../components/bgbutton"
-import { Navigation } from "lucide-react"  
+import { BGbutton } from "../components/bgbutton" 
 import { Arrow } from "../icons/arrow"
 import { SendIcon } from "../icons/sendIcon"
 export function Dashboard (){
