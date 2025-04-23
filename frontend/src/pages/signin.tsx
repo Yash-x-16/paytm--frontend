@@ -1,9 +1,9 @@
 import { WalletIcon } from "../icons/walletIcon"
 import { InputC } from "../components/inputC" 
-import { NameIcon } from "../icons/nameIcon"
+
 import { PasswordC } from "../components/password" 
 import { UserIcon } from "../icons/userIcon" 
-import { Button } from "../components/button"
+
 import { BGbutton } from "../components/bgbutton"
 
 export function Signin(){

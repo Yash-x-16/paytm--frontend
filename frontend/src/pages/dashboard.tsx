@@ -22,8 +22,7 @@ export function Dashboard (){
             </div>
             
               <div className="flex justify-center pb-5 ">
-                    <BGbutton variant="primary" text="SendMoney" size="xl" onStart={<SendIcon/>}/>
-                    <BGbutton variant="tertiary" text= "SendMoney" size="xl" onStart={<Arrow/>}/>
+                    <BGbutton variant="primary" text= "SendMoney" size="xl" onStart={<SendIcon/>}/>
             </div> 
         </div>
       
